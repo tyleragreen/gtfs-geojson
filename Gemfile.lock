@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    gtfs (0.2.5)
+      multi_json
+      rake
+      rubyzip (~> 1.1)
+    multi_json (1.11.2)
+    rake (10.5.0)
+    rubyzip (1.1.7)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  gtfs
+
+BUNDLED WITH
+   1.11.2
