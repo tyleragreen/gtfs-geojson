@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 require 'gtfs'
 require 'json'
 
@@ -5,7 +7,7 @@ module GTFS
   class GeoJSON
 
     def self.get_shapes(path)
-      source = GTFS::Source.build(path)
+      source = GTFS::Source.build(path,{strict:true})
       
       routes   = {}
       features = []
@@ -39,8 +41,4 @@ module GTFS
       return JSON.generate({type: 'FeatureCollection', features: features})
     end
   end
-end
-
-File.open('shapes.geojson','w') do |f|
-  f.write(GTFS::GeoJSON.get_shapes('gtfs.zip'))
 end
