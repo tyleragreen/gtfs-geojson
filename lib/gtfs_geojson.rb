@@ -4,7 +4,7 @@ require 'gtfs'
 require 'json'
 
 module GTFS
-  class GeoJSON
+  module GeoJSON
 
     def self.get_shapes(path)
       source = GTFS::Source.build(path,{strict:true})
