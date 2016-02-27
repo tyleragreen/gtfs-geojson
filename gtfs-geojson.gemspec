@@ -17,6 +17,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'minitest'
 
-  gem.files      = `git ls-files`.split("\n")
-  gem.test_files = `git ls-files -- test/*`.split("\n")
+  gem.files        = `git ls-files`.split("\n")
+  gem.test_files   = `git ls-files -- test/*`.split("\n")
+  gem.require_path = 'lib'
 end
