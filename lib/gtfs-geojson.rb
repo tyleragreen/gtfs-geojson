@@ -7,7 +7,7 @@ require 'gtfs-geojson/version'
 module GTFS
   module GeoJSON
 
-    def self.create(path)
+    def self.generate(path)
       source = GTFS::Source.build(path,{strict:true})
       
       routes   = {}
