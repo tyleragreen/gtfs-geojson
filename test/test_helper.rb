@@ -8,4 +8,4 @@ end
 
 require 'minitest/autorun'
 require 'gtfs'
-require_relative '../lib/gtfs_geojson'
+require_relative '../lib/gtfs-geojson'

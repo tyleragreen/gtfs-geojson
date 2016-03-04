@@ -2,13 +2,12 @@
 
 require 'gtfs'
 require 'json'
+require 'gtfs-geojson/version'
 
 module GTFS
   module GeoJSON
 
-    VERSION = '0.0.2'
-
-    def self.get_shapes(path)
+    def self.create(path)
       source = GTFS::Source.build(path,{strict:true})
       
       routes   = {}
