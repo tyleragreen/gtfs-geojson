@@ -1,14 +1,29 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (4.2.6)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
     docile (1.1.5)
     gtfs (0.2.5)
       multi_json
       rake
       rubyzip (~> 1.1)
+    gtfs-realtime-bindings (0.0.5)
+      protobuf (>= 3.0)
+    i18n (0.7.0)
     json (1.8.3)
+    middleware (0.1.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    protobuf (3.6.7)
+      activesupport (>= 3.2)
+      middleware
+      thor
+      thread_safe
     rake (10.5.0)
     rubyzip (1.1.7)
     simplecov (0.11.2)
@@ -16,15 +31,20 @@ GEM
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    thor (0.19.1)
+    thread_safe (0.3.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
   x64-mingw32
 
 DEPENDENCIES
-  gtfs
-  minitest
-  simplecov
+  gtfs (~> 0.2.5)
+  gtfs-realtime-bindings (~> 0.0.5)
+  minitest (~> 5.8.4)
+  simplecov (~> 0.11.2)
 
 BUNDLED WITH
    1.11.2

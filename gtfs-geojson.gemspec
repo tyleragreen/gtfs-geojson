@@ -20,5 +20,6 @@ Gem::Specification.new do |gem|
 
   gem.files        = `git ls-files`.split("\n")
   gem.test_files   = `git ls-files -- test/*`.split("\n")
+  gem.executables  = ["gtfs-rt_to_json"]
   gem.require_path = 'lib'
 end

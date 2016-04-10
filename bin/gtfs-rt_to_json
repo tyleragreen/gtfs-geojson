@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+#
+# A command-line tool to convert a GTFS-realtime protocol buffer (*.pb)
+# into a human-readable JSON output. This is useful to verify the
+# data from the GTFS-realtime feed before consuming it in another application.
+#
+# Usage: gtfs-rt_to_json <gtfs-realtime_feed_path> <json_output_path>
+#
+# Author: Tyler A. Green (greent@tyleragreen.com)
+#
+require 'google/transit/gtfs-realtime.pb'
+require 'net/http'
+require 'json'
+
+raise StandardError, "Two arguments required." if ARGV.length < 2
+
+data = Net::HTTP.get(URI.parse(ARGV[0]))
+feed = Transit_realtime::FeedMessage.decode(data)
+
+f = File.open(ARGV[1],'w')
+f.write(JSON.pretty_generate(feed))
+f.close
