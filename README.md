@@ -1,4 +1,5 @@
 # gtfs-geojson
+[![Circle CI](https://circleci.com/gh/tyleragreen/gtfs-geojson.svg?style=svg)](https://circleci.com/gh/tyleragreen/gtfs-geojson)
 
 gtfs-geojson is a Ruby utility to convert the shapes.txt file of a GTFS feed into a GeoJSON file. It uses the [GTFS](https://github.com/nerdEd/gtfs) gem to validate GTFS feeds and wrap the feed data into usable objects.
 
