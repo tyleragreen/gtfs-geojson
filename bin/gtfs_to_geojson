@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+#
+# A command-line tool to convert a GTFS feed shapes.txt file
+# into a GeoJSON file.
+#
+# Usage: gtfs_to_geojson <gtfs_feed_path> <geojson_output_path>
+#
+# Author: Tyler A. Green (greent@tyleragreen.com)
+#
+require_relative '../lib/gtfs-geojson'
+
+raise StandardError, "Two arguments required." if ARGV.length < 2
+
+geojson = GTFS::GeoJSON.generate(ARGV[0])
+f = File.open(ARGV[1],'w') 
+f.write(geojson)
+f.close

@@ -18,14 +18,14 @@ GEM
     json (1.8.3)
     middleware (0.1.0)
     minitest (5.8.4)
-    multi_json (1.11.2)
+    multi_json (1.11.3)
     protobuf (3.6.7)
       activesupport (>= 3.2)
       middleware
       thor
       thread_safe
-    rake (10.5.0)
-    rubyzip (1.1.7)
+    rake (11.1.2)
+    rubyzip (1.2.0)
     simplecov (0.11.2)
       docile (~> 1.1.0)
       json (~> 1.8)

@@ -14,12 +14,13 @@ Gem::Specification.new do |gem|
   gem.license     = 'MIT'
 
   gem.add_dependency 'gtfs', '0.2.5'
+  gem.add_dependency 'gtfs-realtime-bindings', '0.0.5'
 
   gem.add_development_dependency 'simplecov', '0.11.2'
   gem.add_development_dependency 'minitest',  '5.8.4'
 
   gem.files        = `git ls-files`.split("\n")
   gem.test_files   = `git ls-files -- test/*`.split("\n")
-  gem.executables  = ["gtfs-rt_to_json"]
+  gem.executables  = ["gtfs-rt_to_json","gtfs_to_geojson"]
   gem.require_path = 'lib'
 end
