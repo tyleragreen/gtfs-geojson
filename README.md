@@ -1,7 +1,7 @@
 # gtfs-geojson
 [![Circle CI](https://circleci.com/gh/tyleragreen/gtfs-geojson.svg?style=svg)](https://circleci.com/gh/tyleragreen/gtfs-geojson)
 
-gtfs-geojson is a Ruby utility to convert the shapes.txt file of a GTFS feed into a GeoJSON file. It uses the [GTFS](https://github.com/nerdEd/gtfs) gem to validate GTFS feeds and wrap the feed data into usable objects.
+gtfs-geojson is a Ruby utility to convert the shapes.txt file of a GTFS feed into a GeoJSON file. It uses the [GTFS](https://github.com/nerdEd/gtfs) gem to validate GTFS feeds and wrap the feed data into usable objects. Two command-line utilities are also included with a gem install.
 
 ## Installation
 
@@ -12,6 +12,16 @@ gem 'gtfs-geojson'
 or install the gem through the command line.
 ```
 gem install `gtfs-geojson`
+```
+
+## Command-Line Utilities
+Convert a GTFS feed shapes.txt file into a GeoJSON file.
+```
+gtfs_to_geojson gtfs.zip output.geojson
+```
+Print a human-readable form of a GTFS-realtime feed.
+```
+gtfs-rt_to_json http://developer.mbta.com/lib/GTRTFS/Alerts/VehiclePositions.pb positions.json
 ```
 
 ## Usage
